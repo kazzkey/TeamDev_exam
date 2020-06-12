@@ -17,7 +17,7 @@ en:
     - Fri
     - Sat
     abbr_month_names:
-    - 
+    -
     - Jan
     - Feb
     - Mar
@@ -43,7 +43,7 @@ en:
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-    - 
+    -
     - January
     - February
     - March
@@ -267,6 +267,7 @@ en:
       delete: 'Delete'
       create: 'Create'
       invite: 'Invite'
+      make_owner: 'Make Owner'
     top:
       line1: 'it is an application to share a specific issue (agenda) easily'
       line2: 'for each member separately for each team or agenda'
