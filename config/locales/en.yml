@@ -17,7 +17,7 @@ en:
     - Fri
     - Sat
     abbr_month_names:
-    - 
+    -
     - Jan
     - Feb
     - Mar
@@ -43,7 +43,7 @@ en:
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-    - 
+    -
     - January
     - February
     - March
@@ -216,6 +216,7 @@ en:
   views:
     messages:
       create_agenda: 'Successfully created an agenda!'
+      delete_agenda: 'Successfully deleted the agenda'
       create_article: 'Successfully created an article!'
       update_article: 'Successfully updated the article!'
       assigned: 'Assigned!'
@@ -261,6 +262,7 @@ en:
       edit_profile: 'Edit Profile'
       team_you_belong_to: 'The team you belong to'
       posted_articles: 'List of posted articles'
+      are_you_sure?: 'Are you sure?'
     button:
       submit: 'Submit'
       edit: 'Edit'
