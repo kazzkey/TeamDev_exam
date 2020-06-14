@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_team, only: %i[show edit update destroy]
+  before_action :set_team, only: %i[show edit update destroy make_leader]
 
   def index
     @teams = Team.all
@@ -45,6 +45,17 @@ class TeamsController < ApplicationController
 
   def dashboard
     @team = current_user.keep_team_id ? Team.find(current_user.keep_team_id) : current_user.teams.first
+  end
+
+  def make_leader
+    @user = User.find(params[:user_id])
+    @team.owner = @user
+    if @team.save
+      TeamMailer.make_leader_mail(@team, @user).deliver
+      redirect_to @team, notice: I18n.t('views.messages.make_leader')
+    else
+      flash.now[:error] = I18n.t('views.messages.failed_to_save_team')
+    end
   end
 
   private
